@@ -125,7 +125,7 @@ call plug#begin()
 
 	Plug 'JuliaEditorSupport/julia-vim'
 
-	Plug 'drewtempelmeyer/palenight.vim'
+" Plug 'drewtempelmeyer/palenight.vim'
 
 	" Plug 'dracula/vim', { 'as': 'dracula'  }
 
@@ -139,9 +139,9 @@ set conceallevel=1
 "let g:neocomplete#enable_at_startup = 1
 "let g:deoplete#enable_at_startup = 1
 
-set statusline+=%warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" set statusline+=%warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
 " let g:syntastic_always_populate_loc_list = 1
 " let g:syntastic_auto_loc_list = 1
@@ -152,11 +152,11 @@ set statusline+=%*
 :hi notesTextURL cterm=bold
 
 
-set background=dark
-colorscheme palenight
+" set background=dark
+" colorscheme palenight
 " colorscheme dracula
 
-let g:airline_theme = "palenight"
+" let g:airline_theme = "palenight"
 
 
 set scrolloff=5

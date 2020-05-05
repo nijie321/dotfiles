@@ -9,6 +9,7 @@
 " is present. But we're including it here just in case this config file is
 " loaded some other way (e.g. saved as `foo`, and then Vim started with
 " `vim -u foo`).
+
 set nocompatible
 
 " Turn on syntax highlighting.
@@ -101,42 +102,42 @@ imap jk <esc>
 
 call plug#begin()
 
-Plug 'vim-syntastic/syntastic'
+	Plug 'vim-syntastic/syntastic'
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
 
-" Plug 'valloric/youcompleteme'
-Plug 'Shougo/deoplete.nvim'
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
-
-
-Plug 'pangloss/vim-javascript'
+	" Plug 'valloric/youcompleteme'
+	Plug 'Shougo/deoplete.nvim'
+	Plug 'roxma/nvim-yarp'
+	Plug 'roxma/vim-hug-neovim-rpc'
 
 
-Plug 'xolox/vim-notes'
-Plug 'xolox/vim-misc'
+	Plug 'pangloss/vim-javascript'
 
 
-Plug 'maxmellon/vim-jsx-pretty'
+	Plug 'xolox/vim-notes'
+	Plug 'xolox/vim-misc'
 
 
-Plug 'JuliaEditorSupport/julia-vim'
+	Plug 'maxmellon/vim-jsx-pretty'
 
-Plug 'drewtempelmeyer/palenight.vim'
 
-" Plug 'dracula/vim', { 'as': 'dracula'  }
+	Plug 'JuliaEditorSupport/julia-vim'
 
-Plug 'neovimhaskell/haskell-vim'
+	Plug 'drewtempelmeyer/palenight.vim'
+
+	" Plug 'dracula/vim', { 'as': 'dracula'  }
+
+	Plug 'neovimhaskell/haskell-vim'
 call plug#end()
 
 let g:notes_directories = ['~/Documents/Notes']
 let g:javascript_conceal_function             = "ƒ"
 set conceallevel=1
 
-let g:neocomplete#enable_at_startup = 1
-
+"let g:neocomplete#enable_at_startup = 1
+"let g:deoplete#enable_at_startup = 1
 
 set statusline+=%warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -163,3 +164,14 @@ set scrolloff=5
 " map <F2> :echo 'Current time is ' . strftime('%c')<CR>
 
 filetype plugin indent on
+
+
+nnoremap <Leader>1 1gt
+nnoremap <Leader>2 2gt
+nnoremap <Leader>3 3gt
+nnoremap <Leader>4 4gt
+nnoremap <Leader>5 5gt
+nnoremap <Leader>6 6gt
+nnoremap <Leader>7 7gt
+nnoremap <Leader>8 8gt
+nnoremap <Leader>9 9gt

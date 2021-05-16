@@ -165,7 +165,11 @@ set scrolloff=5
 
 filetype plugin indent on
 
-let mapleader="'"
+let mapleader=" "
+map <leader>tn :tabnew<CR>
+map <leader>to :tabonly<CR>
+map <leader>tc :tabclose<CR>
+
 nnoremap <Leader>1 1gt
 nnoremap <Leader>2 2gt
 nnoremap <Leader>3 3gt

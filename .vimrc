@@ -89,19 +89,15 @@ map <C-n> :NERDTreeToggle<CR>
 let g:javascript_plugin_jsdoc = 1
 
 
-:set shiftwidth=2
+:set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 :set autoindent
 :set smartindent
-:set tabstop=2
-
 
 nmap 0 ^
 
 imap jk <esc>
 
-
 call plug#begin()
-
 	Plug 'vim-syntastic/syntastic'
 
 	Plug 'vim-airline/vim-airline'
@@ -109,30 +105,21 @@ call plug#begin()
 
 	" Plug 'valloric/youcompleteme'
 	Plug 'Shougo/deoplete.nvim'
-	Plug 'roxma/nvim-yarp'
 	Plug 'roxma/vim-hug-neovim-rpc'
-
 
 	Plug 'pangloss/vim-javascript'
 
-
-	Plug 'xolox/vim-notes'
 	Plug 'xolox/vim-misc'
 
 
 	Plug 'maxmellon/vim-jsx-pretty'
 
 
-	Plug 'JuliaEditorSupport/julia-vim'
-
 " Plug 'drewtempelmeyer/palenight.vim'
 
 	" Plug 'dracula/vim', { 'as': 'dracula'  }
-
-	Plug 'neovimhaskell/haskell-vim'
 call plug#end()
 
-let g:notes_directories = ['~/Documents/Notes']
 let g:javascript_conceal_function             = "ƒ"
 set conceallevel=1
 

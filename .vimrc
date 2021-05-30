@@ -98,22 +98,39 @@ nmap 0 ^
 imap jk <esc>
 
 call plug#begin()
+	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+	Plug 'junegunn/fzf.vim'
+
+	" Plug 'justinmk/vim-sneak'
+	" Plug 'easymotion/vim-easymotion'
+
+	Plug'neoclide/coc.nvim', {'branch': 'release'}
+
 	Plug 'vim-syntastic/syntastic'
+
+	Plug 'tpope/vim-commentary'
 
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
+	
+	Plug 'jiangmiao/auto-pairs'
 
+
+	Plug 'preservim/nerdtree'
 	" Plug 'valloric/youcompleteme'
 	Plug 'Shougo/deoplete.nvim'
 	Plug 'roxma/vim-hug-neovim-rpc'
 
+	Plug 'mxw/vim-jsx'
 	Plug 'pangloss/vim-javascript'
 
 	Plug 'xolox/vim-misc'
 
+	Plug 'jparise/vim-graphql'
 
 	Plug 'maxmellon/vim-jsx-pretty'
 
+	Plug 'joshdick/onedark.vim'
 
 " Plug 'drewtempelmeyer/palenight.vim'
 
@@ -138,13 +155,25 @@ set conceallevel=1
 
 :hi notesTextURL cterm=bold
 
-
-" set background=dark
-" colorscheme palenight
-" colorscheme dracula
+colorscheme onedark
+let g:airline_theme = "onedark"
 
 " let g:airline_theme = "palenight"
 
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
 set scrolloff=5
  

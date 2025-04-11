@@ -35,6 +35,7 @@ return {
       local capabilities = cmp_nvim_lsp.default_capabilities()
 
       mason_lspconfig.setup({
+        automatic_installation = true,
         ensure_installed = {
           "rust_analyzer",
           "cssls",

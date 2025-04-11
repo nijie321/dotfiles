@@ -18,6 +18,7 @@ return {
       },
       format_on_save = {
         timeout_ms = 500,
+        async = false,
         lsp_fallback = true,
       },
     })

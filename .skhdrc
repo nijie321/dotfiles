@@ -1,0 +1,56 @@
+
+# open terminal, blazingly fast compared to iTerm/Hyper
+# cmd - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
+cmd - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
+
+# open qutebrowser
+# cmd + shift - return : ~/Scripts/qtb.sh
+
+# open mpv
+# cmd - m : open -na /Applications/mpv.app $(pbpaste)
+
+
+# Navigation
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+
+
+
+# Moving windows
+# shift + alt - h : yabai -m window --warp west
+# shift + alt - j : yabai -m window --warp south
+# shift + alt - k : yabai -m window --warp north
+# shift + alt - l : yabai -m window --warp east
+
+# Resize windows
+shift + alt - h : yabai -m window --resize right:-20:0 2> /dev/null || yabai -m window --resize left:-20:0 2> /dev/null
+shift + alt - j : yabai -m window --resize bottom:0:20 2> /dev/null || yabai -m window --resize top:0:20 2> /dev/null
+shift + alt - k : yabai -m window --resize bottom:0:-20 2> /dev/null || yabai -m window --resize top:0:-20 2> /dev/null
+shift + alt - l : yabai -m window --resize right:20:0 2> /dev/null || yabai -m window --resize left:20:0 2> /dev/null
+
+
+# Equalize size of windows
+# lctrl + alt - e : yabao -m space --balance
+
+
+
+# Rotate on X and Y Axis
+shift + alt - x : yabai -m space --mirror x-axis
+shift + alt - y : yabai -m space --mirror y-axis
+
+
+# Make window native fullscreen
+alt - f : yabai -m window --toggle zoom-fullscreen
+
+
+# Rotate windows clockwise and counter-clockwise
+# alt - r : yabai -m space --rotate 270
+# shift + alt - r : yabai -m space --rotate 90
+
+
+# move window to display left and right
+shift + alt - s : yabai -m window --display west; yabai -m display --focus west;
+shift + alt - g : yabai -m window --display east; yabai -m display --focus east;
+
